@@ -21,7 +21,7 @@ public class User {
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
-    private BigDecimal balance = BigDecimal.ZERO;
+    private double balance = 0;
 
     private String phone;
 

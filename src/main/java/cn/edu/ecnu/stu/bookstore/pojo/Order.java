@@ -22,11 +22,13 @@ public class Order {
 
     private String toAddress;
 
-    private BigDecimal price;
+    private double amount;
 
-    private OrderStatus status;
+    private int status;
 
     private String storeId;
 
     private Date createTime;
+
+
 }
