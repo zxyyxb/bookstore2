@@ -1,0 +1,22 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.edu.ecnu.stu.bookstore.mapper.UserMapper">
+    <insert id="insert" useGeneratedKeys="true">
+        insert into t_user(username, password, address, phone)
+        values (#{user.username}, #{user.password}, #{user.address}, #{user.phone})
+    </insert>
+
+    <delete id="delete">
+        delete from t_user where id = #{userId}
+    </delete>
+
+    <delete id="deleteByName">
+        delete from t_user where username = #{username}
+    </delete>
+
+    <select id="checkUserByUsername" resultType="integer">
+        select count(*) from t_user where username = #{username}
+    </select>
+</mapper>
